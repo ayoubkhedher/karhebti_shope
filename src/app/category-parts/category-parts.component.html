@@ -1,0 +1,20 @@
+<div class="category-container">
+    <h2>Pièces pour {{ categoryName }}</h2>
+    <div class="parts-grid">
+      <div class="part-card" *ngFor="let part of parts">
+        <img [src]="part.image" [alt]="part.name">
+        <div class="part-details">
+          <h3>{{ part.name }}</h3>
+          <p>{{ part.description }}</p>
+          <p><strong>Numéro de série :</strong> {{ part.serialNumber }}</p>
+          <p [ngClass]="{'in-stock': part.inStock, 'out-of-stock': !part.inStock}">
+            {{ part.inStock ? 'En stock' : 'Rupture de stock' }}
+          </p>
+          <button (click)="addToCart(part)" [disabled]="!part.inStock">
+            Ajouter au panier
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,29 @@
+<header class="top-header">
+    <div class="contact-info">
+      <span>📍  Ben Arous, Tunisie</span>
+      <span>📞 +216 94 336 221</span>
+      <span>🕒 Lun-ven 8h30-17h</span>
+      <span class="mail"> karhebtishope.tunisia&#64;gmail.com </span>
+    </div>
+</header>
+  
+  <nav class="navbar">
+    <div class="logo">
+        <img src="assets/karhebti-removebg-preview.png" alt="AutoPart Logo" />
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Recherche par référence" />
+      <button>RECHERCHER</button>
+    </div>
+    <div class="account" >
+        <span class="icon" >👤Mon compte</span>
+        <br>
+        <a [routerLink]="['/compte']" class="nav-link">Se connecter</a>
+    </div>
+    <div class="modal-content">
+        <span class="close" >&times;</span>
+        <span><span class="icon" >🛒Panier </span>
+        <br>
+        <a [routerLink]="['/panier']" class="nav-link" [queryParamsHandling]="'preserve'">Contenu du panier...</a>
+    </span>
+    </div>

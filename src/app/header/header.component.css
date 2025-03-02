@@ -1,0 +1,75 @@
+.top-header {
+    background: hsla(240, 86%, 32%, 0.767);
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+  }
+  
+  .top-header span {
+    margin-right: 17px;
+  }
+  
+  /* Style de la navbar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(0, 65, 119);
+    padding: 10px 15px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo img {/* S'assurer que l'image n'est pas cachée */
+    width: 150px; /* Ajuster la taille */
+    height: auto;
+  }
+  
+  .search-bar {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .search-bar input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-bar button {
+    background: #035223;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .account-cart {
+    text-align: center;
+    width: 150px;
+    color: rgb(247, 243, 243);
+  }
+  
+  .cart-icon {
+    position: relative;
+    font-size: 30px;
+    color: rgb(14, 13, 13);
+  }
+  
+  .cart-count {
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 2px 5px;
+    position: relative;
+    top: -8px;
+    right: 5px;
+  }
+  .close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    cursor: pointer;
+    font-size: 18px;
+  }

@@ -1,0 +1,38 @@
+<div class="cart-container">
+  <h1 class="cart-title">Panier</h1>
+
+  <!-- Tableau des produits -->
+  <table class="cart-table">
+    <thead>
+      <tr>
+        <th>IMAGE</th>
+        <th>PRODUIT</th>
+        <th>PRIX</th>
+        <th>QUANTITÉ</th>
+        <th>TOTAL</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Ici, insère dynamiquement les produits avec Angular -->
+      <tr *ngFor="let item of cartItems">
+        <td><img [src]="item.image" alt="Produit" class="product-img"></td>
+        <td>{{ item.name }}</td>
+        <td>{{ item.price | currency:'TND' }}</td>
+        <td>
+          <input type="number" [(ngModel)]="item.quantity" min="1" class="quantity-input" (change)="updateTotal()">
+        </td>
+        <td>{{ (item.price * item.quantity) | currency:'TND' }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Résumé total -->
+  <div class="cart-summary">
+    <h2>Total</h2>
+    <p>Total brut: <span>{{ totalBrut | currency:'TND' }}</span></p>
+    <p>Remise: <span>{{ remise | currency:'TND' }}</span></p>
+    <p class="total-net">Total net: <span>{{ totalNet | currency:'TND' }}</span></p>
+    <button class="confirm-btn">Confirmer la commande</button>
+  </div>
+</div>
+

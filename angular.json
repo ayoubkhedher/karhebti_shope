@@ -20,18 +20,24 @@
               "zone.js"
             ],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
+           "assets": [
+            {
+              "glob": "**/*",
+              "input": "src/assets",
+              "output": "/assets"
+            },
+            "src/favicon.ico"
+          ]
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
               "src/styles.css"
-            ],
-            "scripts": [],
+            ]
+
+
+
+           
             "server": "src/main.server.ts",
-            "outputMode": "server",
             "ssr": {
               "entry": "src/server.ts"
             }
@@ -84,18 +90,17 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
-            "scripts": []
+              "src/favicon.ico",
+              "src/assets"
+            ]
+
           }
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "bbe49444-da36-4998-ab85-b2956e61bd5c"
   }
+
 }

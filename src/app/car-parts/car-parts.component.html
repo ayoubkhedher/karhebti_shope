@@ -1,0 +1,17 @@
+<div class="catalog-container">
+    <h2>TROUVEZ DES PIÈCES DÉTACHÉES DANS LE CATALOGUE KARHEBTI</h2>
+    <div class="catalog-grid">
+      <div class="catalog-item" *ngFor="let part of parts">
+        <img [src]="part.image" [alt]="part.name">
+        <p>{{ part.name }}</p>
+        <div *ngFor="let part of parts">
+          <a [routerLink]="['/carParts', part.name]" > </a>
+        </div> 
+      </div>       
+      
+    </div>
+  </div>
+
+
+  
+  
