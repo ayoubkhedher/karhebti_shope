@@ -20,7 +20,7 @@
   }
   
   .logo img {/* S'assurer que l'image n'est pas cachée */
-    width: 150px; /* Ajuster la taille */
+    width: 170px; /* Ajuster la taille */
     height: auto;
   }
   
@@ -34,7 +34,11 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  
+  .contact-info span {
+    color: white;
+    width: 150px;
+
+  }
   .search-bar button {
     background: #035223;
     color: white;
@@ -49,7 +53,6 @@
     width: 150px;
     color: rgb(247, 243, 243);
   }
-  
   .cart-icon {
     position: relative;
     font-size: 30px;

@@ -7,7 +7,7 @@
   h2 {
     font-size: 24px;
     margin-bottom: 20px;
-    color: #300017;
+    color: #ffffff;
   }
   
   .catalog-grid {
@@ -33,7 +33,7 @@
   }
   
   .catalog-item img {
-    width: 50px;
+    width: 150px;
     height: auto;
     margin-bottom: 10px;
   }
