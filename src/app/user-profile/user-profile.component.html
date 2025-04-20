@@ -1,0 +1,78 @@
+<div class="profile-order-container">
+  <!-- Édition du profil -->
+  <div class="profile-container">
+    <div class="main-content">
+      <div class="header-bar">
+        <h2>Éditer le profil</h2>
+        <button class="logout-btn" (click)="logout()">Déconnecter</button>
+      </div>
+      
+      <form (ngSubmit)="onSubmit()" #profileForm="ngForm">
+        <label>Username</label>
+        <input type="text" [(ngModel)]="user.username" name="username" disabled />
+
+        <label>Adresse</label>
+        <input type="text" [(ngModel)]="user.adresse" name="adresse" />
+
+        <div class="row">
+          <div>
+            <label>Ville</label>
+            <input type="text" [(ngModel)]="user.ville" name="ville" />
+          </div>
+          <div>
+            <label>Matricule</label>
+            <input type="text" [(ngModel)]="user.matricule" name="matricule" />
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label>Tel</label>
+            <input type="text" [(ngModel)]="user.tel" name="tel" />
+          </div>
+          <div>
+            <label>Autre Tel</label>
+            <input type="text" [(ngModel)]="user.autreTel" name="autreTel" />
+          </div>
+        </div>
+
+        <label>VIN numéro de chassis</label>
+        <input type="text" [(ngModel)]="user.vin" name="vin" />
+
+        <label>Photo de profil</label>
+        <input type="file" (change)="onFileChange($event)" />
+
+        <button type="submit" class="btn">Update</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Historique des commandes -->
+  <div class="order-history">
+    <h2>Historique des commandes</h2>
+
+    <div class="filters">
+      <label><input type="radio" name="status" value="all" checked /> Tous</label>
+      <label><input type="radio" name="status" value="pending" /> En attente</label>
+      <label><input type="radio" name="status" value="preparation" /> En préparation</label>
+      <label><input type="radio" name="status" value="ready" /> Prête à livrée</label>
+      <label><input type="radio" name="status" value="delivered" /> Livrée</label>
+    </div>
+
+    <table class="orders-table">
+      <thead>
+        <tr>
+          <th>COMMANDE ID</th>
+          <th>DATE</th>
+          <th>STATUT</th>
+          <th>TOTAL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- *ngFor ici -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  

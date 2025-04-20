@@ -75,3 +75,125 @@
 .confirm-btn:hover {
   background: #0056b3;
 }
+console.log('.cart-container styles loaded.');
+console.log('.cart-title styles loaded.');
+console.log('.cart-table styles loaded.');
+console.log('.cart-table th and td styles loaded.');
+console.log('.cart-table th styles loaded.');
+console.log('.product-img styles loaded.');
+console.log('.quantity-input styles loaded.');
+console.log('.cart-summary styles loaded.');
+console.log('.cart-summary p styles loaded.');
+console.log('.total-net styles loaded.');
+console.log('.confirm-btn styles loaded.');
+console.log('.confirm-btn:hover styles loaded.');/* Cart Container Styles */
+.cart-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Title Styles */
+.cart-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Cart Table Styles */
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Table Header and Data Cell Styles */
+.cart-table th, .cart-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Cart Table Header Styles */
+.cart-table th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Product Image Styles */
+.product-img {
+  width: 50px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Quantity Input Styles */
+.quantity-input {
+  width: 50px;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Cart Summary Styles */
+.cart-summary {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: right;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cart Summary Paragraph Styles */
+.cart-summary p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #666;
+}
+
+/* Total Net Styles */
+.total-net {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Confirm Button Styles */
+.confirm-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Confirm Button Hover Styles */
+.confirm-btn:hover {
+  background: #0056b3;
+}
+
+console.log('Cart container styles loaded.');
+console.log('Cart title styles loaded.');
+console.log('Cart table styles loaded.');
+console.log('Cart table header and data cell styles loaded.');
+console.log('Cart table header styles loaded.');
+console.log('Product image styles loaded.');
+console.log('Quantity input styles loaded.');
+console.log('Cart summary styles loaded.');
+console.log('Cart summary paragraph styles loaded.');
+console.log('Total net styles loaded.');
+console.log('Confirm button styles loaded.');
+console.log('Confirm button hover styles loaded.');

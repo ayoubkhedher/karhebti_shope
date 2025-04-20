@@ -1,0 +1,75 @@
+<div class="commande-container">
+    <!-- Information de la commande -->
+    <div class="commande-info">
+      <h3>Information de la commande</h3>
+      <form>
+        <label>Nom de facturation*</label>
+        <input type="text" />
+  
+        <label>Adresse de livraison*</label>
+        <input type="text"  />
+  
+        <div class="row">
+          <div>
+            <label>Ville*</label>
+            <input type="text" />
+          </div>
+          <div>
+            <label>Matricule</label>
+            <input type="text"  />
+          </div>
+        </div>
+  
+        <div class="row">
+          <div>
+            <label>Tel*</label>
+            <input type="text"  />
+          </div>
+          <div>
+            <label>Autre Tel</label>
+            <input type="text" />
+          </div>
+        </div>
+  
+        <label>VIN numéro de chassis</label>
+        <input type="text" />
+      </form>
+    </div>
+  
+    <!-- Détails de la commande -->
+    <div class="commande-details">
+      <h3>Votre commande</h3>
+      <table>
+        <tr>
+          <th>Produit</th>
+          <th>Total</th>
+        </tr>
+        <tr>
+          <td>LPR 05P867 : Plaquettes de frein avant (Jeu de 4) × 1</td>
+          <td>44.780 DT</td>
+        </tr>
+      </table>
+  
+      <p>Sous-total: <span>44.780 DT</span></p>
+      <p>Remise: <span>-0.000 DT</span></p>
+      <h4>Total: <span>44.780 DT</span></h4>
+      <p class="info">*Hors frais de livraison</p>
+  
+      <!-- Mode de paiement -->
+      <div class="paiement-options">
+        <label><input type="radio" name="paiement" value="livraison" checked> Paiement à la livraison</label>
+        <p class="desc">Payez en espèces à la livraison.</p>
+  
+        <label><input type="radio" name="paiement" value="carte"> Carte bancaire</label>
+        <label><input type="radio" name="paiement" value="virement"> Virement bancaire direct</label>
+      </div>
+  
+      <div>
+        <input type="checkbox" id="terms"  />
+        <label for="terms">J'ai lu et j'accepte <a href="#">les termes et conditions du site</a></label>
+      </div>
+  
+      <button [disabled]="!termsAccepted" (click)="confirmerCommande()">Confirmer la commande</button>
+    </div>
+  </div>
+  

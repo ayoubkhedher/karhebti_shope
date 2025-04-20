@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -6,7 +8,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   templateUrl: './compte.component.html',
   styleUrls: ['./compte.component.css'],
-  imports: [RouterModule]
+  imports: [RouterModule,CommonModule,FormsModule]
 })
 export class CompteComponent {
   logout() {

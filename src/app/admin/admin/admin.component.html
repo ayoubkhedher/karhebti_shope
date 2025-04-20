@@ -1,0 +1,138 @@
+<div class="admin-dashboard">
+    <h1>Tableau de bord de l'administrateur</h1>
+  
+    <!-- GESTION PIÈCES -->
+    <section class="gestion-pieces">
+      <h2>Catalogue de Pièces</h2>
+      <form (ngSubmit)="ajouterPiece()" #formAjout="ngForm" class="form-section">
+        <div class="form-group">
+          <label>Nom</label>
+          <input type="text" [(ngModel)]="nouvellePiece.nom" name="nom" required />
+        </div>
+  
+        <div class="form-group">
+          <label>Catégorie</label>
+          <select [(ngModel)]="nouvellePiece.categorie" name="categorie" required>
+            <option *ngFor="let cat of categories" [value]="cat">{{ cat }}</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label>Voiture</label>
+          <select [(ngModel)]="nouvellePiece.voitureId" name="voitureId" required>
+            <option *ngFor="let v of voitures" [value]="v.id">{{ v.nom }}</option>
+          </select>
+        </div>
+  
+        <div class="form-group">
+          <label>Prix</label>
+          <input type="number" [(ngModel)]="nouvellePiece.prix" name="prix" required />
+        </div>
+  
+        <div class="form-group">
+          <label>Stock</label>
+          <input type="number" [(ngModel)]="nouvellePiece.stock" name="stock" required />
+        </div>
+  
+        <button type="submit">Ajouter</button>
+      </form>
+  
+      <h3>Liste des Pièces</h3>
+      <table>
+        <tr>
+          <th>Nom</th>
+          <th>Catégorie</th>
+          <th>Voiture</th>
+          <th>Prix</th>
+          <th>Stock</th>
+          <th>Statut</th>
+          <th>Actions</th>
+        </tr>
+        <tr *ngFor="let piece of pieces; let i = index">
+          <td>{{ piece.nom }}</td>
+          <td>{{ piece.categorie }}</td>
+          <td>{{ getNomVoitureById(piece.voitureId) }}</td>
+          <td>{{ piece.prix }}</td>
+          <td>{{ piece.stock }}</td>
+          <td>{{ piece.statut }}</td>
+          <td>
+            <button (click)="modifierPiece(i)">Modifier</button>
+            <button (click)="supprimerPiece(i)">Supprimer</button>
+          </td>
+        </tr>
+      </table>
+    </section>
+  
+    <!-- GESTION COMMANDES -->
+    <section class="gestion-commandes">
+      <h2>Commandes</h2>
+      <table>
+        <tr>
+          <th>ID</th>
+          <th>Client</th>
+          <th>Statut</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let commande of commandes">
+          <td>{{ commande.id }}</td>
+          <td>{{ commande.client }}</td>
+          <td>{{ commande.status }}</td>
+          <td><button (click)="changerStatusCommande(commande)">Changer</button></td>
+        </tr>
+      </table>
+    </section>
+  
+    <!-- GESTION UTILISATEURS -->
+    <section class="gestion-utilisateurs">
+      <h2>Utilisateurs</h2>
+      <table>
+        <tr>
+          <th>Nom</th>
+          <th>Email</th>
+          <th>Rôle</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let utilisateur of utilisateurs">
+          <td>{{ utilisateur.nom }}</td>
+          <td>{{ utilisateur.email }}</td>
+          <td>{{ utilisateur.role }}</td>
+          <td><button (click)="modifierUtilisateur(utilisateur)">Modifier</button></td>
+        </tr>
+      </table>
+    </section>
+  
+    <!-- GESTION REMISES -->
+    <section class="gestion-remises">
+      <h2>Remises & Promotions</h2>
+      <form (ngSubmit)="ajouterRemise()" #formRemise="ngForm">
+        <div class="form-group">
+          <label>Code</label>
+          <input type="text" [(ngModel)]="nouvelleRemise.code" name="code" required />
+        </div>
+        <div class="form-group">
+          <label>Pourcentage</label>
+          <input type="number" [(ngModel)]="nouvelleRemise.pourcentage" name="pourcentage" required />
+        </div>
+        <button type="submit">Ajouter</button>
+      </form>
+  
+      <h3>Remises Actuelles</h3>
+      <table>
+        <tr>
+          <th>Code</th>
+          <th>%</th>
+          <th>Action</th>
+        </tr>
+        <tr *ngFor="let remise of remises">
+          <td>{{ remise.code }}</td>
+          <td>{{ remise.pourcentage }}%</td>
+          <td><button (click)="supprimerRemise(remise)">Supprimer</button></td>
+        </tr>
+      </table>
+    </section>
+  </div>
+  
+  
+  
+  
+  

@@ -4,8 +4,12 @@
       <div class="catalog-item" *ngFor="let part of parts">
         <img [src]="part.image" [alt]="part.name">
         <p>{{ part.name }}</p>
+        <button [routerLink]="'/pieces'" class="btn btn-info">
+          Voir pièces
+        </button>
+        
         <div *ngFor="let part of parts">
-          <a [routerLink]="['/carParts', part.name]" > </a>
+
         </div> 
       </div>       
       

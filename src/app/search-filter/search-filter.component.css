@@ -4,9 +4,7 @@
     color: white;
     border-radius: 5px;
   }
-  
-  
-  
+ 
   .search-form {
     display: flex;
     justify-content: center;
@@ -39,4 +37,7 @@
     color: white;
     width: 120px;
   }
-  
+  h2{
+    color: rgb(28, 6, 154);
+
+  }

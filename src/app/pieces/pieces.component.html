@@ -1,0 +1,30 @@
+<div class="pieces-container">
+  <div class="piece-card" *ngFor="let piece of pieces">
+    
+    <div class="piece-header">
+      <img class="marque-logo" [src]="'assets/logos/' + piece.marque.toLowerCase() + '.png'" alt="{{ piece.marque }}">
+    </div>
+
+    <div class="piece-image">
+      <img [src]="piece.image" [alt]="piece.nom">
+    </div>
+
+    <div class="piece-info">
+      <p class="reference"><strong>{{ piece.marque }}</strong> – Réf : {{ piece.reference }}</p>
+      <h3 class="piece-nom">{{ piece.nom }}</h3>
+      <p class="prix">{{ piece.prix | number:'1.2-3' }} €</p>
+
+      <div class="stock-status" [ngClass]="{ 'en-stock': piece.enStock, 'hors-stock': !piece.enStock }">
+        {{ piece.enStock ? '✅ En stock' : '❌ Hors stock' }}
+      </div>
+
+      <button *ngIf="piece.enStock" class="btn btn-success ajouter-panier-btn">
+        🛒 Ajouter au panier
+      </button>
+
+    </div>
+    
+  </div>
+</div>
+
+  

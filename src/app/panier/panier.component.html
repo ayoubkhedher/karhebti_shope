@@ -32,7 +32,11 @@
     <p>Total brut: <span>{{ totalBrut | currency:'TND' }}</span></p>
     <p>Remise: <span>{{ remise | currency:'TND' }}</span></p>
     <p class="total-net">Total net: <span>{{ totalNet | currency:'TND' }}</span></p>
-    <button class="confirm-btn">Confirmer la commande</button>
+    <button [routerLink]="'/Commande'" class="btn btn-success">
+      Confirmer la commande
+    </button>
+    
+    
   </div>
 </div>
 

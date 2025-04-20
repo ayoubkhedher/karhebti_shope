@@ -24,9 +24,12 @@
     height: auto;
   }
   
+ 
   .search-bar {
     display: flex;
-    gap: 5px;
+    gap: 40px;
+    width: 150px;
+
   }
   
   .search-bar input {
@@ -48,27 +51,57 @@
     cursor: pointer;
   }
   
-  .account-cart {
-    text-align: center;
-    width: 150px;
-    color: rgb(247, 243, 243);
-  }
-  .cart-icon {
-    position: relative;
-    font-size: 30px;
-    color: rgb(14, 13, 13);
+  .topbar {
+    background-color: #078400; /* vert vif */
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
   }
   
-  .cart-count {
-    background-color: black;
-    color: white;
-    font-size: 12px;
-    border-radius: 50%;
-    padding: 2px 5px;
-    position: relative;
-    top: -8px;
-    right: 5px;
+  .account,
+  .modal-content {
+    display: flex;
+    align-items: center;
   }
+  
+  .nav-link {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0 10px;
+  }
+  
+  .nav-link .icon {
+    font-size: 18px;
+    margin-right: 5px;
+  }
+  
+  .nav-link .text {
+    margin-right: 5px;
+  }
+  
+  .nav-link .panier-id {
+    margin-left: 5px;
+    font-weight: normal;
+  }
+  
+  .nav-link .dropdown {
+    margin-left: 5px;
+    font-size: 12px;
+  }
+  
+  .divider {
+    height: 30px;
+    width: 1px;
+    background-color: #ffffff80;
+    margin: 0 15px;
+  }
+  
   .close {
     position: absolute;
     right: 15px;

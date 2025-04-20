@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-header',
-  standalone: true, // Assurez-vous que c'est bien un standalone component
+  standalone: true,
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
   imports: [CommonModule, RouterModule]

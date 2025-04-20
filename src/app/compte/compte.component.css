@@ -1,4 +1,4 @@
-/* Style global */
+
 .container {
     display: flex;
     justify-content: center;
@@ -6,7 +6,6 @@
     height: 100vh;
   }
   
-  /* Conteneur du formulaire */
   .form-container {
     display: flex;
     background: white;
@@ -17,19 +16,16 @@
     width: 100%;
   }
   
-  /* Style des blocs formulaire */
   .form-box {
     flex: 1;
     padding: 20px;
   }
   
-  /* Titre */
   h2 {
     margin-bottom: 10px;
     font-size: 22px;
   }
   
-  /* Style des inputs */
   input {
     width: 100%;
     padding: 8px;
@@ -38,7 +34,6 @@
     border-radius: 5px;
   }
   
-  /* Liens */
   a {
     color: blue;
     font-size: 14px;
@@ -47,7 +42,6 @@
     text-decoration: none;
   }
   
-  /* Checkbox */
   .checkbox {
     display: flex;
     align-items: center;
@@ -57,7 +51,6 @@
     margin-left: 5px;
   }
   
-  /* Boutons */
   .btn {
     width: 100%;
     padding: 10px;
@@ -73,7 +66,6 @@
     background: #0056b3;
   }
   
-  /* Boutons sociaux */
   .facebook-btn {
     background: #1877f2;
   }
@@ -84,7 +76,6 @@
     border: 1px solid #ccc;
   }
   
-  /* Séparateur "OU" */
   .or-divider {
     text-align: center;
     margin: 10px 0;

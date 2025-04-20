@@ -36,4 +36,5 @@ export class CarPartsComponent {
     navigateToCategory(categoryName: string = '') {
       this.router.navigate(['/category', categoryName]); // Utilisation correcte
     }
+    
   }
